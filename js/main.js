@@ -15,7 +15,10 @@ function addMultipliers() {
     for (const taskName in gameData.taskData) {
         const task = gameData.taskData[taskName]
 
-        task.xpMultipliers = []
+        task.xpMultipliers = [999999999]
+
+    
+                                     
         if (task instanceof Job) task.incomeMultipliers = []
 
         task.xpMultipliers.push(task.getMaxLevelMultiplier.bind(task))
